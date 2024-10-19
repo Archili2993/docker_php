@@ -1,5 +1,7 @@
 FROM php:8.1-fpm-alpine
 
+ADD nginx/conf.d/default.conf /etc/nginx/conf.d
+
 RUN apk add --no-cache \
     $PHPIZE_DEPS \
     mysql-dev \
